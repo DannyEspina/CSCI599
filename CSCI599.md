@@ -1,4 +1,4 @@
-## __Day 1__
+# __Day 1__
 
 In scala, almost all constructs have values. This feature can make program more  concise and easier to read
  (conform to functional style). In contrast, java has many statements
