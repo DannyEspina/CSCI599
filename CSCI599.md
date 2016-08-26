@@ -12,16 +12,16 @@ val x=0
 ```
   This will give a compiling error. type of x is inferred.
 ```scala
-  x = 5		
+x = 5		
   ```
 
 Since 0 is integer , compiler will inter x is Int. Type inference makes your code concise.
 ```scala
-  val x: Int = 0
-  ```
+val x: Int = 0
+```
 
 ```java
-  java int x = 0; 	
+java int x = 0; 	
 ```
 Scala is static-typing language. Type of variable can be inferred.
 
@@ -36,24 +36,28 @@ resl:Any = -1
 
 Var means you can change value of n
 
-	var n = 10		
+```scala
+var n = 10		
+``` 
+This is imperative style:
 
-This is imperative style.
-
-		n:Int		
+```scala
+n:Int		
+```
 
 Scala is purely object-oriented language
-
-	Int <— Object 	
-	int <— Primitive type
+```scala
+Int <— Object 	
+int <— Primitive type
+```
   Note that you can drop semicolon if it falls just before end of line
-
-	var r = 1
-	if ( n > 0 ) {
-		r = r*n;
-		n -=1,
-		}
-
+```scala
+var r = 1
+if ( n > 0 ) {
+	r = r*n;
+	n -=1,
+}
+```
 
 #### Block expressions and assignments
 
@@ -61,36 +65,34 @@ Scala is purely object-oriented language
 
   Things to note this is section of code: _ is like * in java where you import all members of math class. the last line is your return value because last   expression is the value of whole block.
 ```scala
-	val x0 = 1.0  // x0: Double
-	val y0 = 1.0
-	var x1 = 4.0
-	var y1 = 5.0
-	import scala.math._		
-	val distance = {
-			val dx = x1 - x0
-			val dy = y1 - y0
+val x0 = 1.0  // x0: Double
+val y0 = 1.0
+var x1 = 4.0
+var y1 = 5.0
+
+import scala.math._		
+val distance = {
+	val dx = x1 - x0
+	val dy = y1 - y0
 sqrt( dx * dx + dy * dy )
+}
 ```
+In Scala, don't use the return statement. return is rarely used in Scala. Futhermore, assignments that have no value are said to have a value of type Unit. Unit is like void in Java.
 
-
-  In Scala, don't use the return statement. return is rarely used in Scala. Futhermore, assignments that have no value are said to have a value of type Unit. Unit is like void in Java.
-
-  This line of code won't work because you can’t assign Unit to x
-  () (value of Unit) type mismatch: fount Unit required Double
+This line of code won't work because you can’t assign Unit to x() (value of Unit) type mismatch: fount Unit required Double
 
 ```scala
 x1 = y1 = 1
 ```
 
-while loops (is rarely used in Scala) because it has mutation
-
-Note that r = r * n will muatate the value of r in each iteration
+while loops (is rarely used in Scala) because it has mutation.Note that r = r * n will muatate the value of r in each iteration
 ```scala
-	r = 1
-	n = 10
-	while ( n > 0 ) {
-		r = r * n 	
-		n -=1
+r = 1
+n = 10
+while ( n > 0 ) {
+	r = r * n 	
+	n -=1
+}
 ```
 
 #### For loops
@@ -101,8 +103,8 @@ Note that r = r * n will muatate the value of r in each iteration
 r =1
 n=10
 for( i <- 1 to n){ 		 
-r = r * i 		//i =1, i=2, i=3 … i=10
-	}
+r = r * i  //i =1, i=2, i=3 … i=10
+}
 ```
 the construct for ( i <- expr) moves the variable; transverse all values of the expression to the right of the <-
 
@@ -123,5 +125,4 @@ sum1 = 0
 for( ch<- “hello”) sum1 +=ch
 	} //end of main
 } //end of object
-
 ```
