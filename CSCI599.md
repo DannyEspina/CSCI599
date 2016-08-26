@@ -50,7 +50,7 @@ Scala is purely object-oriented language
 Int <— Object 	
 int <— Primitive type
 ```
-  Note that you can drop semicolon if it falls just before end of line
+Note that you can drop semicolon if it falls just before end of line
 ```scala
 var r = 1
 if ( n > 0 ) {
@@ -61,9 +61,9 @@ if ( n > 0 ) {
 
 #### Block expressions and assignments
 
-  In scala, a { } block contains a sequence of expressions and the reuslt is also an expressions. The value of the block is the value of the last expressions.
+In scala, a { } block contains a sequence of expressions and the reuslt is also an expressions. The value of the block is the value of the last expressions.
 
-  Things to note this is section of code: _ is like * in java where you import all members of math class. the last line is your return value because last   expression is the value of whole block.
+Things to note this is section of code: _ is like * in java where you import all members of math class. the last line is your return value because last   expression is the value of whole block.
 ```scala
 val x0 = 1.0  // x0: Double
 val y0 = 1.0
@@ -106,7 +106,7 @@ for( i <- 1 to n){
 r = r * i  //i =1, i=2, i=3 … i=10
 }
 ```
-the construct for ( i <- expr) moves the variable; transverse all values of the expression to the right of the <-
+The construct for ( i <- expr) moves the variable; transverse all values of the expression to the right of the <-
 
 For a scam collection such as range, the loop make; assume each value in turn. the type of the variable is the element type of collection. you can’t mutate; in the loop. for loops is purely functional style.
 
