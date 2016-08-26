@@ -1,6 +1,6 @@
 # Day 3
 
-#### for loop for comprehension
+### for loop for comprehension
 
 Exception: when you throw an exception, current computation. Is aborted, and the run time system looks for exception handles.
 
