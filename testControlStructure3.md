@@ -51,11 +51,7 @@ grep(".*gcd.*")
 
 
 
-//s.* matches s followed by zero or more characters
-//.*gcd.* matches any line that has "gcd"
-//variable definition in for loops
-//a variable named trimmed is introduced halfway through for expression
-//That variable is initalized to the result of Line.trim
+
 
 def grep3(pattern: String): Unit = {
 for{
@@ -67,11 +63,7 @@ if trimmed.matches(pattern)
 } 
 println(file + ": " + trimmed)
 }
-//if you use curly braces, you can drop all semicolons
-//while all of examples so far have operated on interated values and then forgotten them
-//you can alos generate a value to remember for each iteration
-//basically you can save values generated in each iteration into a collection
-//for example here is a function that identifies the .scala file and stores them in an array
+
 
 def scalaFiles: Array[java.io.File] = {
 for{
@@ -80,9 +72,7 @@ if file.getName.endsWith(".scala")
 } 
 yield file
 }
-//the syntax of for-yeild expression is like this:
-//for clauses yeild body
-//Transforming an Array[File] to Array[Int] with a for
+
 
 val forLineLengths: Array[Int] ={
 for{
@@ -129,10 +119,7 @@ i += 1
 }//end while loop for i
 }// end function
 
-//refactor imperative-style code
-//return a row as a sequence of String
-//each String is one piece in that row
-//row is row number
+
 
 def makeRowSeq(row: Int): Seq[String] = 
 for(col <- 1 to 10) yield {
@@ -145,7 +132,7 @@ padding + prod
 
 def makeRow(row: Int): String = makeRowSeq(row).mkString
 
-//return a table as a string with one row per line
+
 
 def multiTable_2(): String = {
 //result of this for expression will be sequence of row String
